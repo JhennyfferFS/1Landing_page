@@ -18,6 +18,8 @@ header img {
     position: absolute;
     top: 10px;
     left: 10px;
+    height: 150px;
+    width: 300px;
 }
 
 header h1 {
@@ -59,8 +61,6 @@ section {
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-    
 }
 
 #services li:hover {
@@ -74,7 +74,7 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: inline-block;
     text-align: left;
-    width: 50%
+    width: 50%;
 }
 
 form label {
@@ -145,4 +145,53 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+#messages-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cute-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fef5ff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 15%;
+}
+
+.cute-message p {
+    margin: 0;
+}
+
+.hearts {
+    font-size: 1.5em;
+    color: #ff69b4;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .header img {
+        display: none;
+    }   
+
+}
+
+@media (max-width: 768px) {
+    #messages-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cute-message {
+        width: 80%;
+    }
 }
